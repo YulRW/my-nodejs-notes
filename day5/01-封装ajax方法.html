@@ -1,0 +1,36 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-01-30 22:59:41
+ * @LastEditTime : 2020-01-30 23:13:09
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \day5\01-封装ajax方法.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>封装ajax</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let xhr = new XMLHttpRequest();
+        
+        xhr.open('get','data.json');
+
+        xhr.send();
+
+        xhr.onload = function () {
+            console.log(xhr.responseText);
+        }
+
+
+    </script>
+</body>
+</html>

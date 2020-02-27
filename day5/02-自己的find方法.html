@@ -1,0 +1,49 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-01-31 19:08:19
+ * @LastEditTime : 2020-01-31 19:23:56
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \undefinedc:\Users\Administrator\Desktop\学习笔记\day5\02-自己的find方法.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var data = [
+            { id: 1, name: '于翔' },
+            { id: 2, name: '严慧珊' }
+        ];
+
+        Array.prototype.myFind = function (callback) {
+            console.log('myFind方法调用');
+            for(var i = 0; i<data.length;i++){
+                var temp = callback(data[i]);
+                if(temp){
+                    return data[i];
+                }
+            }
+            return undefined;
+        }
+        var id = 2;
+
+        var obj = data.myFind(function (item) {
+            return item.id == id;
+        });
+        console.log(obj);
+
+    </script>
+</body>
+
+</html>
